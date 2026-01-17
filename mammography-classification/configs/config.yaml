@@ -1,0 +1,27 @@
+project_name : "Mammography Mammography_Classification_CBIS_DDSM"
+data:
+  root_dir: "mammography-classification/data"
+  image_size: [224, 224]
+  batch_size: 32
+  num_workers: 0  # Set to 0 on Windows to avoid multiprocessing issues
+  num_classes: 3
+  class_names: ["benign", "benign_without_callback", "malignant"]
+
+model:
+  name: "efficientnet_b0" #lightweight model suitable for image classification
+  pretrained: true
+  dropout_rate: 0.3
+
+training:
+  epochs: 20
+  learning_rate: 0.001
+  weight_decay: 0.0001
+  checkpoint_dir: "mammography-classification/checkpoints"
+  save_dir: "checkpoints"
+  patience: 5 # for early stopping
+
+preprocessing:
+  use_clahe: true #contrast ennhancement
+  clip_limit: 2.0
+  normalize_mean: [0.485, 0.456, 0.406] #imageNet defualts
+  normalize_std: [0.229, 0.224, 0.225]

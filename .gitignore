@@ -1,0 +1,49 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+venv/
+env/
+
+# Datasets (large files)
+mammography-classification/dataset/
+mammography-classification/data/train/
+mammography-classification/data/val/
+mammography-classification/data/test/
+mammography-classification/data/separated_data/
+
+# Model checkpoints (large files)
+mammography-classification/checkpoints/*.pth
+*.pth
+*.pt
+
+# Jupyter notebooks checkpoints
+.ipynb_checkpoints/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Temporary files
+fix_gpu.py
+test_cuda.py
+main.py
+explore.ipynb
+temp/
+tmp/
