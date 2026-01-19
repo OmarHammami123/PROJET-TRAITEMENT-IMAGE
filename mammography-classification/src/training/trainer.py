@@ -14,8 +14,12 @@ class Trainer:
         self.cfg = cfg
         self.device = device
         
-        #loss function (weighted for class imbalance)
-        self.criterion = nn.CrossEntropyLoss()
+        #loss function with class weights for imbalance
+        # Calculate weights: inverse of class frequency
+        # benign: 2436, benign_without_callback: ~400, malignant: ~1500
+        # Weights help the model pay attention to minority class
+        class_weights = torch.tensor([1.0, 3.5, 1.2]).to(device)  # Boost middle class
+        self.criterion = nn.CrossEntropyLoss(weight=class_weights)
         
         #optimizer
         self.optimizer = optim.AdamW(

@@ -93,7 +93,7 @@ def main():
     model = create_model(cfg, device=device)
     
     # Load best checkpoint
-    checkpoint_path = Path(cfg['training']['checkpoint_dir']) / 'best_model.pth'
+    checkpoint_path = Path(cfg['training']['checkpoint_dir']) / 'best_checkpoint.pth'
     
     if not checkpoint_path.exists():
         print(f"\n❌ Error: Checkpoint not found at {checkpoint_path}")

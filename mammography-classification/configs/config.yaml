@@ -13,12 +13,12 @@ model:
   dropout_rate: 0.3
 
 training:
-  epochs: 20
-  learning_rate: 0.001
+  epochs: 30  # Increased from 20
+  learning_rate: 0.0005  # Reduced for better convergence
   weight_decay: 0.0001
   checkpoint_dir: "mammography-classification/checkpoints"
   save_dir: "checkpoints"
-  patience: 5 # for early stopping
+  patience: 10 # Increased patience for early stopping
 
 preprocessing:
   use_clahe: true #contrast ennhancement

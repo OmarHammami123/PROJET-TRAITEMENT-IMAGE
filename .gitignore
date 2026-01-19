@@ -40,6 +40,9 @@ Thumbs.db
 *.log
 logs/
 
+# Results (generated outputs)
+mammography-classification/results/
+
 # Temporary files
 fix_gpu.py
 test_cuda.py
