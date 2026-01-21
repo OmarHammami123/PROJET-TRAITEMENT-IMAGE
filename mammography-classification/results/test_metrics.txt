@@ -1,0 +1,28 @@
+============================================================
+MAMMOGRAPHY CLASSIFICATION - TEST RESULTS
+============================================================
+
+Model: efficientnet_b0
+Checkpoint: mammography-classification\checkpoints\best_checkpoint.pth
+Epoch: 8
+Test samples: 547
+
+Overall Accuracy: 0.5612 (56.12%)
+Precision (macro): 0.3832
+Recall (macro): 0.4099
+F1-Score (macro): 0.3814
+ROC-AUC (macro): 0.7275
+
+============================================================
+CLASSIFICATION REPORT
+============================================================
+
+                         precision    recall  f1-score   support
+
+                 benign       0.60      0.41      0.49       207
+benign_without_callback       0.00      0.00      0.00        69
+              malignant       0.55      0.82      0.66       271
+
+               accuracy                           0.56       547
+              macro avg       0.38      0.41      0.38       547
+           weighted avg       0.50      0.56      0.51       547
