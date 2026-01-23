@@ -16,7 +16,20 @@ mammography-classification/dataset/
 mammography-classification/data/train/
 mammography-classification/data/val/
 mammography-classification/data/test/
+mamography_segment/dataset/csv/
+mamography_segment/dataset/jpeg/
+mamography_segment/dataset/
+mamography_segment/data/train/
+mamography_segment/data/val/
+mamography_segment/data/test/
 mammography-classification/data/separated_data/
+mamography_segment/dataset/csv/calc_case_description_test_set.csv
+mamography_segment/dataset/csv/calc_case_description_train_set.csv
+mamography_segment/dataset/csv/dicom_info.csv
+mamography_segment/dataset/csv/mass_case_description_test_set.csv
+mamography_segment/dataset/csv/mass_case_description_train_set.csv
+mamography_segment/dataset/csv/meta.csv
+mamography_segment/dataset/jpeg/..
 
 # Jupyter notebooks checkpoints
 .ipynb_checkpoints/
